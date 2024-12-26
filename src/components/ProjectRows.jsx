@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import PropTypes from "prop-types";
 
 const ProjectRows = ({
   className = "",
@@ -130,30 +129,5 @@ const ProjectRows = ({
   );
 };
 
-ProjectRows.propTypes = {
-  className: PropTypes.string,
-  codeantCiApp: PropTypes.string,
-  text: PropTypes.string,
-  javascript: PropTypes.string,
-  kB: PropTypes.string,
-  updated2DaysAgo: PropTypes.string,
-
-  /** Style props */
-  projectRowsBackgroundColor: PropTypes.string,
-  frameDivWidth: PropTypes.string,
-  codeantCiAppDisplay: PropTypes.string,
-  codeantCiAppMinWidth: PropTypes.string,
-  textMinWidth: PropTypes.string,
-  frameDivJustifyContent: PropTypes.string,
-  frameDivGap: PropTypes.string,
-  frameDivAlignSelf: PropTypes.string,
-  javascriptDisplay: PropTypes.string,
-  javascriptMinWidth: PropTypes.string,
-  kBDisplay: PropTypes.string,
-  kBMinWidth: PropTypes.string,
-  frameDivJustifyContent1: PropTypes.string,
-  frameDivGap1: PropTypes.string,
-  frameDivAlignSelf1: PropTypes.string,
-};
 
 export default ProjectRows;
