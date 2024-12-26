@@ -2,12 +2,12 @@
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/muzzlol/codeantassessment.git
+    git clone https://github.com/muzzlol/codeantassesment.git
     ```
 
 2. **Navigate to the project directory:**
     ```sh
-    cd codeantassessment
+    cd codeantassesment
     ```
 
 3. **Install dependencies:**
