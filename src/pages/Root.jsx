@@ -2,24 +2,25 @@ import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProjectRows from "../components/ProjectRows";
 
+// Update the Button component to handle responsive text
 const Button = ({
   icon,
   text,
   isSelected,
   onClick,
-  variant = "sidebar", // sidebar, action, primary
+  variant = "sidebar",
   className = "",
 }) => {
   return (
     <button
       onClick={onClick}
       className={`
-        flex flex-row items-center justify-start gap-spacing-md1 rounded-radius-sm
+        flex flex-row items-center gap-spacing-md1 rounded-radius-sm
         transition-colors duration-200 
         ${
           variant === "sidebar"
             ? `
-              w-full py-spacing-md1 px-spacing-lg1
+              w-full justify-start py-spacing-md1 px-spacing-lg1
               ${
                 isSelected
                   ? "bg-royalblue-100 text-white border-gray-400 border-[2px]"
@@ -28,11 +29,11 @@ const Button = ({
             `
             : variant === "primary"
             ? `
-              py-2 px-[13px] border-[1px] border-royalblue-100
+              justify-center py-2 md:px-[13px] px-2 border-[1px] border-royalblue-100
               bg-royalblue-100 text-white hover:bg-royalblue-200
             `
             : `
-              py-2 px-[13px] border-[1px] border-lightgray
+              justify-center py-2 md:px-[13px] px-2 border-[1px] border-lightgray
               ${
                 isSelected
                   ? "bg-royalblue-100 text-white border-gray-400 border-[2px]"
@@ -51,7 +52,7 @@ const Button = ({
           src={icon}
         />
       )}
-      <span className="font-semibold">
+      <span className={`font-semibold ${variant !== 'sidebar' ? 'md:block hidden' : ''}`}>
         {text}
       </span>
     </button>
@@ -161,8 +162,8 @@ const Root = () => {
           selectedButton={selectedButton} 
           setSelectedButton={setSelectedButton}
           onTextClick={onTextClick}
-        />
-        <section className="flex-1 bg-component-colors-utility-gray-utility-gray-50 flex flex-row items-start justify-start p-6 box-border max-w-[calc(100%_-_242px)] text-left text-5xl text-gray-100 font-text-xs-medium1 mq1050:pt-5 mq1050:pb-5 mq1050:box-border mq1050:max-w-full">
+          />
+        <section className="flex-1 bg-component-colors-utility-gray-utility-gray-50 flex flex-row items-start justify-start p-6 box-border md:max-w-[calc(100%_-_242px)] max-w-full text-left text-5xl text-gray-100 font-text-xs-medium1 mq1050:pt-5 mq1050:pb-5 mq1050:box-border">
           <div className="h-[912px] flex-1 relative shadow-[0px_1px_2px_rgba(10,_13,_18,_0.05)] rounded-radius-xl bg-white border-component-colors-utility-gray-utility-gray-200 border-[1px] border-solid box-border overflow-hidden max-w-full mq1225:h-auto mq1225:min-h-[912]">
             <div className="absolute top-[0px] left-[0px] bg-white border-component-colors-utility-gray-utility-gray-200 border-b-[1px] border-solid box-border w-full flex flex-col items-start justify-start max-w-full">
               <div className="self-stretch flex flex-col items-start justify-start pt-spacing-2xl px-spacing-3xl pb-20 box-border max-w-full">
