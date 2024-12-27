@@ -53,8 +53,7 @@ module.exports = {
         "spacing-sm": "6px",
       },
       fontFamily: {
-        "text-xs-medium1": "Inter",
-        "text-xs-medium": "'Nunito Sans'",
+        "text-xs-medium": "Inter",
         satoshi: "Satoshi",
       },
       borderRadius: {

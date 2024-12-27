@@ -11,23 +11,21 @@ const ProjectRows = ({
         {/* Left Column */}
         <div className="flex flex-col items-start justify-start gap-3">
           {/* Project Name */}
-          <div className="relative leading-[24px] font-medium mq450:text-base mq450:leading-[19px]">
-            {projectName}
-          </div>
-          
-          {/* Language and Memory Section */}
-          <div className="w-[191.5px] flex flex-row items-start justify-between gap-5 text-base">
-            {/* Language with Dot */}
-            <div className="flex flex-row items-start justify-start gap-2">
-              <div className="relative leading-[24px] inline-block min-w-[55px]">
-                {language}
-              </div>
-              <div className="flex flex-col items-start justify-start pt-2 px-0 pb-0">
-                <div className="w-2 h-2 relative rounded-[50%] bg-royalblue-100" />
-              </div>
-            </div>
-            
-            {/* Memory Usage */}
+                <div className="relative leading-[24px] font-medium mq450:text-base mq450:leading-[19px]">
+                {projectName}
+                </div>
+
+                {/* Language and Memory Section */}
+                <div className="w-[191.5px] flex flex-row items-start justify-between gap-5 text-base">
+                {/* Language with Dot */}
+                <div className="flex flex-row items-center justify-start gap-2">
+                  <div className="relative leading-[24px] inline-block min-w-[55px] flex items-center">
+                  {language}
+                  <div className="w-2 h-2 ml-2 rounded-[50%] bg-royalblue-100" />
+                  </div>
+                </div>
+                
+                {/* Memory Usage */}
             <div className="flex flex-row items-start justify-start gap-2">
               <div className="flex flex-col items-start justify-start pt-1.5 px-0 pb-0">
                 <img
