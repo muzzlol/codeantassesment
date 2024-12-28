@@ -2,8 +2,6 @@ import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProjectRows from "../components/ProjectRows";
 
-// First, add these base styles to your CSS/Tailwind config
-
 const Button = ({
   icon,
   text,
