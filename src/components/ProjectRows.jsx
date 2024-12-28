@@ -6,7 +6,7 @@ const ProjectRows = ({
   lastUpdated
 }) => {
   return (
-    <div className="self-stretch border-lightgray border-b-[1px] border-solid box-border flex flex-row items-start justify-start pt-6 px-0 pb-[22px] max-w-full hover:bg-gray-50">
+    <div className="self-stretch border-lightgray border-b-[1px] border-solid box-border flex flex-row items-start justify-start pt-6 px-0 pb-[22px] max-w-full hover:bg-gray-50 font-inter">
       <div className="flex flex-row items-start justify-start py-0 px-6 box-border gap-2 max-w-full mq750:flex-wrap">
         {/* Left Column */}
         <div className="flex flex-col items-start justify-start gap-3">

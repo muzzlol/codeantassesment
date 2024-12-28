@@ -1,18 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
-@font-face {
-  font-family: "Satoshi";
-  src: url("/Satoshi-Regular.otf");
-  font-weight: 400;
-}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2"),
+       url("/fonts/Satoshi-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+ 
 body {
-  @apply leading-[normal] m-0;
+  @apply font-inter m-0;
 }
 *,
 ::before,
 ::after {
   border-width: 0;
+}
+
+@layer components {
+  .btn-base {
+    @apply flex items-center gap-2 rounded-md transition-colors duration-200;
+  }
+  .sidebar-btn {
+    @apply w-full justify-start py-2 px-3;
+  }
+  .action-btn {
+    @apply justify-center py-2 px-2 md:px-3 border;
+  }
 }
